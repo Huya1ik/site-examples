@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Артель — ремонт квартир под ключ в Краснодаре, смета за один день</title>
+<meta name="description" content="Ремонт квартир под ключ в Краснодаре: смета за один день, бригада на объекте постоянно, договор и гарантия три года. Портфолио объектов с адресами.">
+<meta property="og:title" content="Артель — ремонт квартир под ключ в Краснодаре">
+<meta property="og:description" content="Смета за день, фиксированная цена в договоре, гарантия три года. Портфолио объектов и контакты заказчиков.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d3b6b'/%3E%3Ctext x='16' y='23' font-family='sans-serif' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3EА%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  body{--accent:#1d3b6b;--surface:#f4f5f7;--line:#e2e4e9;--muted:#5f6470;--text:#12141a}
+  .hero .h1{background:linear-gradient(90deg,#12141a,#666b76);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .obj{display:flex;flex-direction:column;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .obj__top{height:180px;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:flex-end;padding:16px}
+  .obj__body{padding:0 24px 24px;display:flex;flex-direction:column;gap:8px}
+  .obj__meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px;line-height:20px}
+  .obj__meta b{color:var(--text);font-weight:600}
+  .form-ok{display:none;font-size:14px;line-height:20px;color:#1d3b6b;font-weight:600}
+  .stages{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+  .stages__row{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:24px;border-bottom:1px solid var(--line)}
+  .stages__row:last-child{border-bottom:0}
+  .stages__row b{font-weight:600}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="#top"><span class="dot"></span>Артель</a>
+  <div class="nav-links">
+    <a href="#objects">Объекты</a>
+    <a href="#prices">Цены</a>
+    <a href="#faq">Вопросы</a>
+  </div>
+  <a class="btn btn--primary" href="#book">Смета за день</a>
+</nav>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero__inner">
+      <div>
+        <p class="caption" style="margin-bottom:24px">Краснодар и край, с 2016 года</p>
+        <h1 class="h1">Ремонт под ключ, в котором смета не растёт на середине</h1>
+        <p class="lead" style="margin-top:24px">Считаем стоимость за один день по обмерам, фиксируем её в договоре и не просим доплатить «на материалы». Бригада живёт на объекте, прораб отвечает в Telegram до десяти вечера.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#book">Вызвать замерщика</a>
+          <a class="btn btn--ghost btn--lg" href="tel:+79000000000">+7 (900) 000 00 00</a>
+        </div>
+        <div class="hero__meta">
+          <div><b>214</b><span>квартир сдано с 2016 года</span></div>
+          <div><b>3 года</b><span>гарантия на работы</span></div>
+          <div><b>0 ₽</b><span>за обмер и смету</span></div>
+        </div>
+      </div>
+
+      <div class="card" id="book">
+        <h2 class="h5" style="margin-bottom:8px">Смета и сроки за один день</h2>
+        <p class="small" style="margin-bottom:24px">Замерщик приедет в удобное время, в том числе в субботу. Это бесплатно.</p>
+        <form class="form" data-validate novalidate>
+          <div class="field">
+            <label for="a1">Имя</label>
+            <input id="a1" name="name" type="text" placeholder="Как к вам обращаться" required>
+            <span class="err">Напишите, как к вам обращаться</span>
+          </div>
+          <div class="field">
+            <label for="a2">Телефон</label>
+            <input id="a2" name="phone" type="tel" placeholder="+7 (900) 000 00 00" required>
+            <span class="err">Нужен номер, чтобы согласовать время</span>
+          </div>
+          <div class="field">
+            <label for="a3">Что за объект</label>
+            <select id="a3" name="object">
+              <option>Квартира в новостройке, черновая</option>
+              <option>Квартира, вторичка</option>
+              <option>Дом или коттедж</option>
+              <option>Коммерческое помещение</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="a4">Площадь, м²</label>
+            <input id="a4" name="area" type="text" placeholder="Например, 62">
+          </div>
+          <button class="btn btn--primary" type="submit">Вызвать замерщика</button>
+          <span class="form-ok">Заявка принята. Позвоним в течение двадцати минут.</span>
+          <p class="note">Обмер и смета бесплатно, без обязательств.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface" id="objects">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 class="h2">Объекты</h2>
+        <p class="body">Пять последних сдач. По каждому можно приехать посмотреть и поговорить с хозяином, если он не против.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="obj">
+          <div class="obj__top"><span class="caption">3D визуализация и фотоотчёт</span></div>
+          <div class="obj__body">
+            <h3 class="h6">ЖК «Панорама», 62 м²</h3>
+            <div class="obj__meta"><span><b>1 060 000 ₽</b> под ключ</span><span><b>74 дня</b></span></div>
+            <p class="small">Двушка с нуля: стяжка, электрика по проекту, санузел под плитку, кухня на заказ.</p>
+          </div>
+        </article>
+        <article class="obj">
+          <div class="obj__top"><span class="caption">Фотоотчёт по этапам</span></div>
+          <div class="obj__body">
+            <h3 class="h6">Улица Красная, вторичка 48 м²</h3>
+            <div class="obj__meta"><span><b>684 300 ₽</b></span><span><b>56 дней</b></span></div>
+            <p class="small">Сняли старую штукатурку, выровняли стены под покраску, заменили всю разводку.</p>
+          </div>
+        </article>
+        <article class="obj">
+          <div class="obj__top"><span class="caption">Фотоотчёт по этапам</span></div>
+          <div class="obj__body">
+            <h3 class="h6">Дом в Динском районе, 126 м²</h3>
+            <div class="obj__meta"><span><b>2 240 000 ₽</b></span><span><b>108 дней</b></span></div>
+            <p class="small">Коттедж под ключ с котельной и тёплым полом на первом этаже, два санузла.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="tagline">
+      <h3 class="h3">Ремонт не должен тянуться дольше, чем вы ждали квартиру.</h3>
+    </div>
+  </section>
+
+  <section class="section wrap" id="prices" style="padding-top:0">
+    <div class="reveal">
+      <div class="section-head">
+        <h2 class="h2">Цены за работу</h2>
+        <p class="body">Без материалов: их выбираете вы, мы привозим по вашим счетам или закупаем за 3 % закупки, это видно в смете.</p>
+      </div>
+      <div class="price-list">
+        <div class="price-row"><span>Косметический ремонт: обои, потолок, покраска, замена напольного</span><b>от 4 870 ₽ / м²</b></div>
+        <div class="price-row"><span>Капитальный без перепланировки: стяжка, штукатурка, электрика, отделка</span><b>от 9 240 ₽ / м²</b></div>
+        <div class="price-row"><span>Под ключ с санузлом и кухней</span><b>от 15 600 ₽ / м²</b></div>
+        <div class="price-row"><span>Санузел под ключ: гидроизоляция, плитка, разводка, установка</span><b>от 1 480 ₽ / м²</b></div>
+        <div class="price-row"><span>Электрика, полная замена на точку</span><b>1 360 ₽</b></div>
+      </div>
+      <p class="small" style="margin-top:16px">В смете каждая позиция отдельно, без строки «прочие работы». Разница с окончательной ценой не больше 5 %, обычно меньше.</p>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 class="h2">Как идёт работа</h2>
+        <p class="body">Прораб один на объект, не бригадир с десятью адресами. Поэтому сроки в договоре реальные.</p>
+      </div>
+      <div class="stages">
+        <div class="stages__row"><b>Первый день</b><div><h3 class="h6">Обмер и смета</h3><p class="body" style="margin-top:8px">Приезжаем, меряем, за сутки присылаем смету по позициям и график работ по неделям.</p></div></div>
+        <div class="stages__row"><b>Договор</b><div><h3 class="h6">Цена и сроки фиксируются</h3><p class="body" style="margin-top:8px">В договоре итоговая сумма и дата сдачи. Доплаты только по вашей инициативе, после согласования.</p></div></div>
+        <div class="stages__row"><b>Работа</b><div><h3 class="h6">Отчёт каждую пятницу</h3><p class="body" style="margin-top:8px">Фото и что сделано за неделю. Мусор вывозим сами, заносим и выносим материалы бесплатно.</p></div></div>
+        <div class="stages__row"><b>Сдача</b><div><h3 class="h6">Приёмка по списку</h3><p class="body" style="margin-top:8px">Проходим по пунктам вместе, недоделки устраняем в течение двух недель. Гарантия три года.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="section-head">
+      <h2 class="h2">Что говорят заказчики</h2>
+      <p class="body">Отзывы собраны после сдачи, поэтому в них видно сроки, а не обещания.</p>
+    </div>
+    <div class="grid grid--3">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="body">Смета совпала с финалом почти до рубля, разница была в плитке, которую мы поменяли сами. Прораб отвечал даже в воскресенье.</p>
+        <div class="quote__who"><div class="avatar">ОП</div><div><p class="small" style="color:var(--text);font-weight:600">Ольга П.</p><p class="small">ЖК «Панорама»</p></div></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="body">Задержка была пять дней из за плитки, которую поставщик привёз партиями. Предупредили заранее, компенсировали установкой шкафа.</p>
+        <div class="quote__who"><div class="avatar">РК</div><div><p class="small" style="color:var(--text);font-weight:600">Роман К.</p><p class="small">Улица Красная</p></div></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★☆</div>
+        <p class="body">Денег больше не просили, это главное. По качеству были две мелочи в санузле, переделали за неделю без разговоров.</p>
+        <div class="quote__who"><div class="avatar">СВ</div><div><p class="small" style="color:var(--text);font-weight:600">Сергей В.</p><p class="small">Динской район</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface" id="faq">
+    <div class="wrap reveal">
+      <h2 class="h2" style="text-align:center;margin-bottom:40px">Частые вопросы</h2>
+      <div class="faq">
+        <details open>
+          <summary>Смета действительно не меняется?</summary>
+          <p class="body">Не меняется, если вы не меняете проект. Всё, что нашли дополнительно после вскрытия стен, сначала согласовываем стоимостью и только потом делаем.</p>
+        </details>
+        <details>
+          <summary>Работаете по этапам?</summary>
+          <p class="body">Да, можно взять только черновые работы или только санузел. Возьмёмся и за доделку после другой бригады, но сначала посмотрим.</p>
+        </details>
+        <details>
+          <summary>Кто закупает материалы?</summary>
+          <p class="body">Можно сами, можно через нас: привозим по вашим счетам, все чеки отдаём. Закупка через нас 3 %, в смете это отдельная строка.</p>
+        </details>
+        <details>
+          <summary>Даёте гарантию?</summary>
+          <p class="body">Три года на работы. Если на гарантии что то пошло не так, приезжаем без споров, это проще, чем суд.</p>
+        </details>
+        <details>
+          <summary>Можно смотреть объект в работе?</summary>
+          <p class="body">Да, приезжайте в любой момент. Ещё лучше, если один из наших объектов рядом, там видно, как выглядит наша стройка в процессе.</p>
+        </details>
+        <details>
+          <summary>Работаете с ипотекой и маткапиталом?</summary>
+          <p class="body">Да, оформляем договор для банка и для пенсионного фонда, есть опыт с обоими.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+      <div>
+        <h2 class="h3">Свободная бригада выходит с 12 декабря</h2>
+        <p class="body" style="margin-top:8px">Чтобы попасть в этот срок, нужен замер до конца недели. Смета бесплатно.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn--primary btn--lg" href="tel:+79000000000">Позвонить</a>
+        <a class="btn btn--ghost btn--lg" href="#book">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <a class="brand" href="#top"><span class="dot"></span>Артель</a>
+      <p class="small" style="margin-top:12px">Краснодар, Северная 279, офис 12<br>Пн по сб, с 9:00 до 20:00</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="tel:+79000000000">+7 (900) 000 00 00</a>
+      <a href="mailto:info@example.ru">info@example.ru</a>
+      <a href="#prices">Цены</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="#">Политика обработки данных</a>
+      <a href="#">Договор подряда</a>
+      <a href="#top">Наверх</a>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn--primary" href="tel:+79000000000">Позвонить</a>
+  <a class="btn btn--ghost" href="#book">Замер</a>
+</div>
+
+<script src="assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гараж 23 — автосервис и шиномонтаж круглосуточно, Краснодар</title>
+<meta name="description" content="Автосервис и шиномонтаж в Краснодаре без очереди: восемь постов, запись на время, работаем круглосуточно. Цены на сайте, запись за минуту.">
+<meta property="og:title" content="Гараж 23 — автосервис и шиномонтаж круглосуточно">
+<meta property="og:description" content="Краснодар, Энгельса 71. Восемь постов, запись на время, работаем ночью. Цены известны до начала работ.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f26a1b'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='%23181818' text-anchor='middle'%3E23%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  body{
+    --bg:#181818; --surface:#1f1f1f; --card:#1f1f1f; --text:#ffffff; --muted:#9b9b9b;
+    --line:#313131; --accent:#f26a1b; --accent-text:#181818;
+  }
+  .hero .h1{background:linear-gradient(90deg,#ffffff,#9b9b9b);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:999px;
+    border:1px solid var(--line);font-size:12px;line-height:16px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+  .badge i{width:8px;height:8px;border-radius:4px;background:#4ade80;display:block}
+  .num-list{display:flex;flex-direction:column;gap:16px;padding:0;margin:0;list-style:none}
+  .num-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:24px}
+  .num-list li::before{content:'';flex:0 0 8px;height:8px;margin-top:8px;border-radius:4px;background:var(--accent)}
+  .muted-box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .form-ok{display:none;font-size:14px;line-height:20px;color:#4ade80;font-weight:600}
+  .phone-big{font-size:24px;line-height:32px;font-weight:600;text-decoration:none;white-space:nowrap}
+</style>
+</head>
+<body data-theme="dark">
+
+<nav class="nav">
+  <a class="brand" href="#top"><span class="dot"></span>Гараж 23</a>
+  <div class="nav-links">
+    <a href="#prices">Цены</a>
+    <a href="#how">Как работает</a>
+    <a href="#faq">Вопросы</a>
+  </div>
+  <a class="btn btn--primary" href="tel:+79000000000">Записаться</a>
+</nav>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero__inner">
+      <div>
+        <div class="badge"><i></i>Сейчас открыто, свободно 3 поста</div>
+        <h1 class="h1">Шиномонтаж и ремонт без очереди, круглосуточно</h1>
+        <p class="lead" style="margin-top:24px">Краснодар, Энгельса 71. Восемь постов, запись на время: приезжаете к своему часу и уезжаете через сорок минут. Цену называем до начала работ, а не после.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#book">Записаться на время</a>
+          <a class="btn btn--ghost btn--lg" href="tel:+79000000000">+7 (900) 000 00 00</a>
+        </div>
+        <div class="hero__meta">
+          <div><b>4.8</b><span>рейтинг в Яндекс.Картах</span></div>
+          <div><b>2 143</b><span>отзыва за три года</span></div>
+          <div><b>38 мин</b><span>средний визит</span></div>
+        </div>
+      </div>
+
+      <div class="card" id="book" style="border-radius:16px">
+        <h2 class="h5" style="margin-bottom:8px">Записаться на сегодня</h2>
+        <p class="small" style="margin-bottom:24px">Перезвоним в течение 7 минут и назовём точную цену.</p>
+        <form class="form" data-validate novalidate>
+          <div class="field">
+            <label for="f1">Имя</label>
+            <input id="f1" name="name" type="text" placeholder="Как к вам обращаться" required>
+            <span class="err">Напишите, как к вам обращаться</span>
+          </div>
+          <div class="field">
+            <label for="f2">Телефон</label>
+            <input id="f2" name="phone" type="tel" placeholder="+7 (900) 000 00 00" required>
+            <span class="err">Нужен номер, чтобы перезвонить</span>
+          </div>
+          <div class="field">
+            <label for="f3">Что нужно</label>
+            <select id="f3" name="service">
+              <option>Шиномонтаж</option>
+              <option>Развал схождение</option>
+              <option>Замена масла</option>
+              <option>Диагностика ходовой</option>
+              <option>Кузовной ремонт</option>
+            </select>
+          </div>
+          <button class="btn btn--primary" type="submit">Записаться</button>
+          <span class="form-ok">Заявка принята. Перезвоним в течение 7 минут.</span>
+          <p class="note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 class="h2">Что делаем</h2>
+        <p class="body">Всё, что ломается и изнашивается: от переобувки за сорок минут до кузовного ремонта с покраской.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card">
+          <h3 class="h6">Шиномонтаж</h3>
+          <p class="body" style="margin-top:12px">Четыре поста под переобувку, второй комплект храним у себя бесплатно. Зимой работаем без выходных и праздников.</p>
+        </div>
+        <div class="card">
+          <h3 class="h6">Ремонт и ТО</h3>
+          <p class="body" style="margin-top:12px">Масло, фильтры, тормоза, ходовая. Запчасти со склада под ваш VIN или ваши собственные, без наценки на работу.</p>
+        </div>
+        <div class="card">
+          <h3 class="h6">Кузов и покраска</h3>
+          <p class="body" style="margin-top:12px">Покрасочная камера, подбор цвета по спектру. Согласовываем смету и сроки по фотографиям до записи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="tagline">
+      <h3 class="h3">Машина нужна сегодня. А не завтра к обеду.</h3>
+    </div>
+  </section>
+
+  <section class="section wrap" id="prices" style="padding-top:0">
+    <div class="reveal">
+      <div class="section-head">
+        <h2 class="h2">Цены</h2>
+        <p class="body">Стоимость для легковых автомобилей. Для кроссоверов и внедорожников надбавка от 300 ₽, точную цену скажем по телефону.</p>
+      </div>
+      <div class="grid grid--2">
+        <div>
+          <p class="caption" style="margin-bottom:12px">Шиномонтаж, комплект</p>
+          <div class="price-list">
+            <div class="price-row"><span>R13 — R15</span><b>1 640 ₽</b></div>
+            <div class="price-row"><span>R16 — R17</span><b>2 190 ₽</b></div>
+            <div class="price-row"><span>R18 — R19</span><b>2 780 ₽</b></div>
+            <div class="price-row"><span>Балансировка колеса</span><b>310 ₽</b></div>
+            <div class="price-row"><span>Ремонт прокола, жгут</span><b>450 ₽</b></div>
+            <div class="price-row"><span>Хранение комплекта, сезон</span><b>0 ₽</b></div>
+          </div>
+        </div>
+        <div>
+          <p class="caption" style="margin-bottom:12px">Ремонт и обслуживание</p>
+          <div class="price-list">
+            <div class="price-row"><span>Замена масла в двигателе</span><b>от 690 ₽</b></div>
+            <div class="price-row"><span>Диагностика ходовой, на подъёмнике</span><b>1 180 ₽</b></div>
+            <div class="price-row"><span>Замена колодок, ось</span><b>1 460 ₽</b></div>
+            <div class="price-row"><span>Развал схождение, 3D стенд</span><b>1 890 ₽</b></div>
+            <div class="price-row"><span>Покраска элемента</span><b>от 5 240 ₽</b></div>
+            <div class="price-row"><span>Компьютерная диагностика</span><b>890 ₽</b></div>
+          </div>
+        </div>
+      </div>
+      <p class="small" style="margin-top:16px">Диагностика бесплатно, если ремонт делаете у нас.</p>
+    </div>
+  </section>
+
+  <section class="section section--surface" id="how">
+    <div class="wrap reveal">
+      <div class="section-head">
+        <h2 class="h2">Как это работает</h2>
+        <p class="body">Записаться можно за час до приезда. Без звонка тоже примем, но, возможно, придётся подождать.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="step"><div class="step__n">1</div><div><h3 class="h6">Заявка</h3><p class="body" style="margin-top:8px">Звонок или форма. Спрашиваем марку, модель и что случилось.</p></div></div>
+        <div class="step"><div class="step__n">2</div><div><h3 class="h6">Время и цена</h3><p class="body" style="margin-top:8px">Называем стоимость и ближайшее окно. Не понравилось — не приезжаете.</p></div></div>
+        <div class="step"><div class="step__n">3</div><div><h3 class="h6">Работа</h3><p class="body" style="margin-top:8px">Пока делаем, можно сидеть в зоне ожидания или уехать по делам.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="section-head">
+      <h2 class="h2">Отзывы</h2>
+      <p class="body">Все отзывы с Яндекса, отвечаем на каждый в течение дня.</p>
+    </div>
+    <div class="grid grid--3">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="body">Приехал в 2:40 с пробитым колесом. Никого не ждал, починили за двадцать минут, взяли по прайсу с сайта. Редкость.</p>
+        <div class="quote__who"><div class="avatar">АК</div><div><p class="small" style="color:var(--text);font-weight:600">Алексей К.</p><p class="small">Toyota Camry</p></div></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p class="body">Записалась на развал, приехала ровно к времени, взяли сразу. Сказали, что ещё нужно сделать, и что можно подождать сезон. Не навязывали.</p>
+        <div class="quote__who"><div class="avatar">МС</div><div><p class="small" style="color:var(--text);font-weight:600">Марина С.</p><p class="small">Kia Rio</p></div></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★☆</div>
+        <p class="body">Красили бампер, цвет подобрали без нареканий. По срокам сдвинулись на день, предупредили заранее, поэтому не в минус.</p>
+        <div class="quote__who"><div class="avatar">ДП</div><div><p class="small" style="color:var(--text);font-weight:600">Дмитрий П.</p><p class="small">Skoda Octavia</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface" id="faq">
+    <div class="wrap reveal">
+      <h2 class="h2" style="text-align:center;margin-bottom:40px">Частые вопросы</h2>
+      <div class="faq">
+        <details open>
+          <summary>Работаете ночью?</summary>
+          <p class="body">Да, шиномонтаж и диагностика круглосуточно. Кузовной цех и покраска принимают с 9:00 до 20:00.</p>
+        </details>
+        <details>
+          <summary>Нужна ли запись?</summary>
+          <p class="body">Без записи примем, но в сезон переобувки очередь может быть на два часа. С записью вы приезжаете к своему времени.</p>
+        </details>
+        <details>
+          <summary>Можно привезти свои запчасти?</summary>
+          <p class="body">Можно. Работаем с ними, гарантия в этом случае только на работу, на деталь отвечает продавец.</p>
+        </details>
+        <details>
+          <summary>Сколько стоит хранение шин?</summary>
+          <p class="body">Бесплатно, если переобуваетесь у нас. Свои колёса можно оставить на сезон, место под них уже включено в цену.</p>
+        </details>
+        <details>
+          <summary>Даёте гарантию на ремонт?</summary>
+          <p class="body">Да, от шести месяцев на работы и до года на кузовной ремонт с покраской. Записываем в заказ наряд.</p>
+        </details>
+        <details>
+          <summary>Есть ли зона ожидания?</summary>
+          <p class="body">Да, с диванами, кофе и зарядкой. Есть Wi Fi, если нужно поработать, пока делают машину.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal">
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+      <div>
+        <h2 class="h3">Свободно три поста прямо сейчас</h2>
+        <p class="body" style="margin-top:8px">Позвоните, назовём ближайшее время и цену. Или оставьте заявку, перезвоним сами.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn--primary btn--lg" href="tel:+79000000000">Позвонить</a>
+        <a class="btn btn--ghost btn--lg" href="#book">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div>
+      <a class="brand" href="#top" style="color:var(--text)"><span class="dot"></span>Гараж 23</a>
+      <p class="small" style="margin-top:12px">Краснодар, Энгельса 71<br>Круглосуточно, без выходных</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="tel:+79000000000">+7 (900) 000 00 00</a>
+      <a href="mailto:info@example.ru">info@example.ru</a>
+      <a href="#prices">Цены</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <a href="#">Политика обработки данных</a>
+      <a href="#">Договор оферты</a>
+      <a href="#top">Наверх</a>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn--primary" href="tel:+79000000000">Позвонить</a>
+  <a class="btn btn--ghost" href="#book">Записаться</a>
+</div>
+
+<script src="assets/common.js"></script>
+</body>
+</html>

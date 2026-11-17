@@ -1,0 +1,207 @@
+/* base.css — общий каркас демо-страниц под продажу сайтов
+   Manrope, плоские фоны, сетка 8px, радиусы Tailwind, без градиентов в фоне */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#ffffff;
+  --surface:#f5f5f5;
+  --card:#ffffff;
+  --text:#101010;
+  --muted:#666666;
+  --line:#e5e5e5;
+  --accent:#1f4e79;
+  --accent-text:#ffffff;
+  --radius:16px;
+  --max:1120px;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Manrope',system-ui,sans-serif;
+  font-size:16px;
+  line-height:24px;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:24px}
+.section{padding-block:96px}
+.section--tight{padding-block:64px}
+.section--surface{background:var(--surface)}
+
+/* ── текстовые стили ─────────────────────────── */
+.h1{font-size:60px;line-height:1;font-weight:600;letter-spacing:-0.02em;margin:0;
+  text-wrap:balance;
+  background:linear-gradient(90deg,var(--text),var(--muted));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.h2{font-size:48px;line-height:1;font-weight:600;letter-spacing:-0.02em;margin:0;text-wrap:balance}
+.h3{font-size:36px;line-height:40px;font-weight:600;letter-spacing:-0.01em;margin:0;text-wrap:balance}
+.h4{font-size:30px;line-height:36px;font-weight:600;margin:0;text-wrap:balance}
+.h5{font-size:24px;line-height:32px;font-weight:600;margin:0}
+.h6{font-size:20px;line-height:28px;font-weight:600;margin:0}
+.body{font-size:16px;line-height:24px;font-weight:400;color:var(--muted);text-wrap:pretty;margin:0}
+.body-strong{font-size:16px;line-height:24px;font-weight:600;margin:0}
+.small{font-size:14px;line-height:20px;color:var(--muted);margin:0}
+.caption{font-size:12px;line-height:16px;font-weight:500;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;margin:0}
+.lead{font-size:18px;line-height:28px;color:var(--muted);max-width:680px;text-wrap:pretty;margin:0}
+
+/* ── навигация ───────────────────────────────── */
+.nav{
+  position:sticky;top:12px;z-index:50;
+  max-width:var(--max);margin:12px auto 0;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:8px 12px 8px 20px;
+  background:color-mix(in srgb,var(--bg) 78%,transparent);
+  backdrop-filter:blur(16px);
+  border:1px solid var(--line);
+  border-radius:999px;
+}
+.brand{display:flex;align-items:center;gap:8px;font-weight:600;font-size:16px;text-decoration:none}
+.brand span.dot{width:10px;height:10px;border-radius:4px;background:var(--accent);display:inline-block}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:14px;font-weight:500;text-decoration:none;color:var(--muted);transition:color .3s var(--ease)}
+.nav-links a:hover{color:var(--text)}
+
+/* ── кнопки ──────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:8px 12px;border-radius:12px;border:1px solid transparent;
+  font-family:inherit;font-size:16px;line-height:24px;font-weight:600;
+  text-decoration:none;cursor:pointer;
+  transition:transform .5s var(--ease),background .3s var(--ease),color .3s var(--ease);
+}
+.btn--lg{padding:12px 20px;font-size:18px;line-height:28px;border-radius:16px}
+.btn--primary{background:var(--accent);color:var(--accent-text)}
+.btn--primary:hover{transform:translateY(-1px)}
+.btn--primary:active{transform:translateY(1px) scale(0.98)}
+.btn--ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn--ghost:hover{background:var(--surface)}
+.btn:focus-visible,.link:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:2px solid var(--accent);outline-offset:3px}
+
+/* ── hero ────────────────────────────────────── */
+.hero{padding-block:80px 64px}
+@media (min-width:901px){ .hero .h1{font-size:48px;line-height:1.02;letter-spacing:-0.02em} }
+.hero__inner{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
+.hero .h1,.hero .lead{max-width:680px}
+.hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero__meta{display:flex;gap:32px;margin-top:40px;flex-wrap:wrap}
+.hero__meta b{display:block;font-size:24px;line-height:32px;font-weight:600}
+.hero__meta span{font-size:14px;line-height:20px;color:var(--muted)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card--accent{background:var(--accent);color:var(--accent-text);border-color:transparent}
+.card--accent .body,.card--accent .small{color:color-mix(in srgb,var(--accent-text) 75%,transparent)}
+
+/* ── сетки ───────────────────────────────────── */
+.grid{display:grid;gap:16px}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:40px;flex-wrap:wrap}
+.section-head .body{max-width:480px}
+
+/* ── таблица цен ─────────────────────────────── */
+.price-list{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+.price-row{display:flex;justify-content:space-between;gap:24px;padding:16px 24px;border-bottom:1px solid var(--line)}
+.price-row:last-child{border-bottom:0}
+.price-row b{font-weight:600;white-space:nowrap}
+.price-row span{color:var(--muted)}
+
+/* ── шаги ────────────────────────────────────── */
+.step{display:flex;gap:16px;align-items:flex-start}
+.step__n{flex:0 0 40px;height:40px;border-radius:12px;background:var(--accent);color:var(--accent-text);
+  display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px}
+
+/* ── отзывы ──────────────────────────────────── */
+.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:16px;height:100%}
+.quote .body{color:var(--text);font-size:16px}
+.quote__who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.avatar{width:40px;height:40px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;color:var(--muted)}
+.stars{display:flex;gap:2px;color:var(--accent)}
+
+/* ── FAQ ─────────────────────────────────────── */
+.faq{max-width:760px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:24px 0}
+.faq summary{font-size:18px;line-height:28px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:var(--muted);font-weight:500;transition:transform .5s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .body{margin-top:12px}
+
+/* ── форма ───────────────────────────────────── */
+.form{display:flex;flex-direction:column;gap:12px}
+.field{display:flex;flex-direction:column;gap:4px}
+.field label{font-size:14px;line-height:20px;font-weight:500;color:var(--muted)}
+.field input,.field select,.field textarea{
+  font-family:inherit;font-size:16px;line-height:24px;padding:12px 16px;
+  border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);
+  transition:border-color .3s var(--ease);
+}
+.field input:hover,.field textarea:hover{border-color:var(--muted)}
+.field .err{color:#b42318;font-size:12px;line-height:16px;display:none}
+.field.invalid input,.field.invalid textarea{border-color:#b42318}
+.field.invalid .err{display:block}
+.note{font-size:12px;line-height:16px;color:var(--muted)}
+
+/* ── футер ───────────────────────────────────── */
+.footer{border-top:1px solid var(--line);padding:48px 0 32px;margin-top:96px}
+.footer__inner{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.footer a{color:var(--muted);text-decoration:none;font-size:14px}
+.footer a:hover{color:var(--text)}
+
+/* ── мобильная кнопка звонка ─────────────────── */
+.callbar{display:none}
+
+/* ── появление секций ────────────────────────── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ── tagline reveal ──────────────────────────── */
+.tagline{max-width:900px}
+.tagline .h3{display:flex;flex-wrap:wrap;gap:0 12px}
+.tagline .h3 span{opacity:.28;transition:opacity .5s var(--ease)}
+.tagline .h3 span.on{opacity:1}
+
+/* ── адаптив ─────────────────────────────────── */
+@media (max-width:900px){
+  .hero__inner{grid-template-columns:1fr;gap:40px}
+  .grid--3,.grid--4{grid-template-columns:repeat(2,1fr)}
+  .h1{font-size:48px}
+  .h2{font-size:36px;line-height:40px}
+  .h3{font-size:30px;line-height:36px}
+  .section{padding-block:64px}
+  .nav-links{display:none}
+}
+@media (max-width:560px){
+  .grid--2,.grid--3,.grid--4{grid-template-columns:1fr}
+  .h1{font-size:36px;line-height:40px}
+  .h2{font-size:30px;line-height:36px}
+  .h3{font-size:24px;line-height:32px}
+  .hero{padding-block:40px}
+  .section{padding-block:48px}
+  .wrap{padding-inline:16px}
+  .nav{margin:8px 8px 0;padding:8px 8px 8px 16px}
+  .callbar{
+    display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:60;
+    gap:8px;padding:8px;border-radius:16px;background:var(--bg);border:1px solid var(--line);
+    box-shadow:0 8px 24px rgb(0 0 0 / 0.12);
+  }
+  .callbar .btn{flex:1}
+  body{padding-bottom:88px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .tagline .h3 span{opacity:1}
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Примеры сайтов по нишам — что показывать клиенту</title>
+<meta name="description" content="Пять демонстрационных страниц под пять ниш: автоуслуги, туризм, строительство, красота, производство.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111418'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='700' fill='%23fff' text-anchor='middle'%3EП%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  body{--surface:#f4f5f7;--line:#e2e4e9;--muted:#5f6470;--text:#12141a;--accent:#12141a;--accent-text:#ffffff}
+  .hero .h1{background:linear-gradient(90deg,#12141a,#666b76);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .list{display:flex;flex-direction:column;gap:12px}
+  .item{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+    padding:24px;border:1px solid var(--line);border-radius:16px;background:#fff;text-decoration:none;
+    transition:transform .5s var(--ease),border-color .3s var(--ease)}
+  .item:hover{transform:translateY(-2px);border-color:#b9bec7}
+  .item .swatch{width:8px;height:48px;border-radius:4px;display:block}
+  .item__lead{display:flex;gap:16px;align-items:center}
+  .item b{font-size:18px;line-height:28px;font-weight:600;display:block}
+  .item span.small{display:block}
+  .go{font-size:14px;font-weight:600;color:var(--muted);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<main class="hero wrap" style="max-width:900px">
+  <p class="caption" style="margin-bottom:24px">Демонстрационные страницы</p>
+  <h1 class="h1">Пять примеров под пять ниш</h1>
+  <p class="lead" style="margin-top:24px">Каждая страница собрана под конкретную нишу: свои цены, свои возражения, своя логика заявки. Организации вымышленные, телефоны нулевые, цифры выдуманы для демонстрации. Показывать клиенту как есть, заменяя контент на его.</p>
+
+  <div class="list" style="margin-top:40px">
+    <a class="item" href="avto-garazh-23.html">
+      <div class="item__lead"><span class="swatch" style="background:#f26a1b"></span>
+        <div><b>Автоуслуги: шиномонтаж и сервис</b>
+        <span class="small">Круглосуточно, запись на время, цены по разболтовке и марке</span></div>
+      </div>
+      <span class="go">Открыть</span>
+    </a>
+    <a class="item" href="turizm-tihiy-bereg.html">
+      <div class="item__lead"><span class="swatch" style="background:#1f6f5b"></span>
+        <div><b>Туризм: гостевой дом</b>
+        <span class="small">Бронь без комиссии агрегатора, цены по сезонам, ответ за полчаса</span></div>
+      </div>
+      <span class="go">Открыть</span>
+    </a>
+    <a class="item" href="stroyka-artel.html">
+      <div class="item__lead"><span class="swatch" style="background:#1d3b6b"></span>
+        <div><b>Строительство: ремонт под ключ</b>
+        <span class="small">Смета за день, цена в договоре, объекты с адресами и суммами</span></div>
+      </div>
+      <span class="go">Открыть</span>
+    </a>
+    <a class="item" href="krasota-dali.html">
+      <div class="item__lead"><span class="swatch" style="background:#8e4a5c"></span>
+        <div><b>Красота: студия с записью</b>
+        <span class="small">Прайс без скрытых доплат, свободные окна, мастера с портфолио</span></div>
+      </div>
+      <span class="go">Открыть</span>
+    </a>
+    <a class="item" href="apk-karton-yug.html">
+      <div class="item__lead"><span class="swatch" style="background:#1f4e79"></span>
+        <div><b>Производство B2B: гофроупаковка</b>
+        <span class="small">Тиражи, марки картона, таблица цен, КП в течение дня</span></div>
+      </div>
+      <span class="go">Открыть</span>
+    </a>
+  </div>
+
+  <div class="card" style="margin-top:40px;background:var(--surface)">
+    <h2 class="h6">Как это продавать</h2>
+    <p class="body" style="margin-top:8px">В первом сообщении не даём ссылку на все пять. Даём одну, под нишу клиента, и говорим: «смотрите, так выглядит ваш будущий сайт». Общий список показываем только после разговора, когда человек уже спросил про сроки или цену.</p>
+    <p class="body" style="margin-top:12px">Смотреть лучше с телефона: клиент тоже откроет с телефона. Все страницы проверены на ширине 390 пикселей.</p>
+  </div>
+
+  <p class="small" style="margin-top:32px">Файлы лежат рядом с этим каталогом, папка <b>assets</b> нужна всем страницам. Чтобы отправить клиенту ссылку, папку надо положить на хостинг целиком, тогда заработают шрифт и стили.</p>
+</main>
+
+</body>
+</html>
